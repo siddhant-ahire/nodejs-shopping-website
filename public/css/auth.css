@@ -1,0 +1,32 @@
+
+.login-form {
+  width: 20rem;
+  max-width: 90%;
+  margin: auto;
+  display: block;
+}
+
+.errorMessage{
+  background-color:red;
+  text-align: center;
+  width: 300px;
+  height: auto;
+  border-radius: 3px;
+  padding:20px;
+  margin: auto;
+  color:white;
+}
+
+.linkSentMessage{
+  background-color:green;
+  text-align: center;
+  width: 300px;
+  height: auto;
+  border-radius: 3px;
+  padding:20px;
+  margin: auto;
+  color:white;
+}
+
+
+
