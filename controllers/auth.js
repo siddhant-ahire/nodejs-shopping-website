@@ -267,8 +267,8 @@ exports.postNewPassword = (req, res, next) => {
           pageTitle: 'New Password',
           errorMessage: errorMessage[0].msg,
           isAuthenticated: false,
-          passwordToken: token,
-          userId: user._id.toString()
+          passwordToken: passwordToken,
+          userId: userId
         });
       }
       resetUser = user;
