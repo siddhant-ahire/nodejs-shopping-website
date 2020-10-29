@@ -1,7 +1,6 @@
 .product-form {
     width: 20rem;
     max-width: 90%;
-    max-height: 300px;
     margin: auto;
     display: block;
 }
@@ -10,8 +9,12 @@
     width: 20rem;
     max-width: 95%;
     margin: 1rem;
+    text-align: center;
 }
-
+.product-item img {
+    width: auto;
+    height: 200px;
+  }
 .product__title {
     font-size: 1.2rem;
     text-align: center;
