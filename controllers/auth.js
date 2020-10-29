@@ -265,11 +265,11 @@ exports.postNewPassword = (req, res, next) => {
         return res.render('auth/new-password', {
           path: '/new-password',
           pageTitle: 'New Password',
-          isAuthenticated: false,
           errorMessage: errorMessage[0].msg,
-          oldInput: { email: email, password: password, confirmPassword: confirmPassword },
-          validationError: errorMessage
-        })
+          isAuthenticated: false,
+          passwordToken: token,
+          userId: user._id.toString()
+        });
       }
       resetUser = user;
       return bcrypt.hash(newPassword, 12)
