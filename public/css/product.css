@@ -1,6 +1,7 @@
 .product-form {
     width: 20rem;
     max-width: 90%;
+    max-height: 300px;
     margin: auto;
     display: block;
 }
