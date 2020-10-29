@@ -259,6 +259,18 @@ exports.postNewPassword = (req, res, next) => {
     _id: userId
   })
     .then(user => {
+      const error = validationResult(req);
+      if (!error.isEmpty()) {
+        let errorMessage = error.array();
+        return res.render('auth/new-password', {
+          path: '/new-password',
+          pageTitle: 'New Password',
+          isAuthenticated: false,
+          errorMessage: errorMessage[0].msg,
+          oldInput: { email: email, password: password, confirmPassword: confirmPassword },
+          validationError: errorMessage
+        })
+      }
       resetUser = user;
       return bcrypt.hash(newPassword, 12)
     })
